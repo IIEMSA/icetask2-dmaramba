@@ -26,11 +26,10 @@ Console.WriteLine($"Author: {book2.Author}");
 Console.WriteLine($"Title: {book2.Title}");
 Console.WriteLine(new string('-', 20));
 
-
 //Display books using the method in Book class
 Console.WriteLine("Displaying Book 1 Information:");
 book.DisplayBookInfo();
-Console.WriteLine("\n");
+Console.WriteLine(new string('-', 20));
 Console.WriteLine("Displaying Book 2 Information:");
 book2.DisplayBookInfo();
 
