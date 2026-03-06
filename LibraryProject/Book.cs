@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace LibraryProject
 {
+
+   
     internal class Book
     {
 
@@ -18,6 +20,23 @@ namespace LibraryProject
         public int Year;
         public string Description;
         public string Genre;
+
+        //constructor to initialize the book properties
+        public Book()  //() its function, dont terminate it with a semicolon
+        {
+            Year = 2026;
+            Console.WriteLine("Constructor function called");
+        }
+
+        //Parameterized constructor to initialize the book properties with specific values
+        public Book(string author, string title, int year, string description, string genre)
+        {
+            Author = author;
+            Title = title;
+            Year = year;
+            Description = description;
+            Genre = genre;
+        }
 
         /*
          Method to display the book information
