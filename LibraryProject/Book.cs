@@ -28,6 +28,10 @@ namespace LibraryProject
             Console.WriteLine("Constructor function called");
         }
 
+        public Book(int year)  //() its function, dont terminate it with a semicolon
+        {
+            Year = year;
+        }
         //Parameterized constructor to initialize the book properties with specific values
         public Book(string author, string title, int year, string description, string genre)
         {

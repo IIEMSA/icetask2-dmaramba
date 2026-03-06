@@ -34,6 +34,8 @@ Console.WriteLine(new string('-', 20));
 
 Book book4 =new Book("Harper Lee", "To Kill a Mockingbird", 1960, "A novel about racial injustice in the Deep South.", "Classic Literature");
 
+Book book5 = new Book(2025);
+
 //Display books using the method in Book class
 Console.WriteLine("Displaying Book 1 Information:");
 book.DisplayBookInfo();
