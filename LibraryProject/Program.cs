@@ -68,5 +68,8 @@ book4.DisplayBookInfo();
 Console.WriteLine(new string('-', 20));
 Console.WriteLine("Displaying Library Book Information:");
 book6.DisplayLibraryBookInfo();
+Console.WriteLine(new string('-', 20));
+Console.WriteLine("Displaying basic Book Information:");
+book6.DisplayBookInfo(true);
 
 Console.ReadKey();
