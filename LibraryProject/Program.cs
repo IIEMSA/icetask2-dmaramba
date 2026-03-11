@@ -7,6 +7,7 @@ book.Title = "Harry Potter and the Philosopher's Stone";
 book.Year = 1997;
 book.Description = "A young wizard's journey begins.";
 book.Genre = "Fantasy";
+//book.ISBN = "Test";
 
 Book book2 = new Book();
 book2.Author = "George Orwell";
@@ -36,6 +37,22 @@ Book book4 =new Book("Harper Lee", "To Kill a Mockingbird", 1960, "A novel about
 
 Book book5 = new Book(2025);
 
+
+LibraryBook book6 = new LibraryBook();
+book6.Author = "Svetlin Nakov";
+book6.Title = "Fundamentals of Computer Programming with C# ";
+book6.Year = 2024;
+book6.Description = "A comprehensive guide to learning C# programming.";
+book6.Genre = "Programming";
+
+//library book specific properties
+book6.Quantity = 10;
+book6.ShelfNumber = "A1";
+book6.IsAvailable = true;
+
+//.DisplayBookInfo(); // Display common book information
+//book6.DisplayLibraryBookInfo(); // Display library book specific information
+
 //Display books using the method in Book class
 Console.WriteLine("Displaying Book 1 Information:");
 book.DisplayBookInfo();
@@ -48,5 +65,8 @@ book3.DisplayBookInfo();
 Console.WriteLine(new string('-', 20));
 Console.WriteLine("Displaying Book 4 Information:");
 book4.DisplayBookInfo();
+Console.WriteLine(new string('-', 20));
+Console.WriteLine("Displaying Library Book Information:");
+book6.DisplayLibraryBookInfo();
 
 Console.ReadKey();

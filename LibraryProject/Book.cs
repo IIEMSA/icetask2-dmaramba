@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LibraryProject
 {
 
-   
+
     internal class Book
     {
 
@@ -20,11 +20,13 @@ namespace LibraryProject
         public int Year;
         public string Description;
         public string Genre;
+        private string ISBN;
 
         //constructor to initialize the book properties
         public Book()  //() its function, dont terminate it with a semicolon
         {
             Year = 2026;
+            ISBN = "123-4567890123";
             Console.WriteLine("Constructor function called");
         }
 
@@ -40,6 +42,7 @@ namespace LibraryProject
             Year = year;
             Description = description;
             Genre = genre;
+            ISBN = "123-4567890123";
         }
 
         /*
@@ -52,6 +55,19 @@ namespace LibraryProject
             Console.WriteLine($"Year: {Year}");
             Console.WriteLine($"Description: {Description}");
             Console.WriteLine($"Genre: {Genre}");
+            Console.WriteLine($"ISBN: {ISBN}");
+        }
+        public void DisplayBookInfo(bool basicInfo)
+        {
+            if (basicInfo)
+            {
+                Console.WriteLine($"Author: {Author}");
+                Console.WriteLine($"Title: {Title}");
+            }
+            else
+            {
+                DisplayBookInfo();
+            }
         }
     }
 }
