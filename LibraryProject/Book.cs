@@ -15,17 +15,34 @@ namespace LibraryProject
          properties of the book class
         state they hold information about the book 
          */
-        public string Author;
-        public string Title;
-        public int Year;
-        public string Description;
-        public string Genre;
-        private string ISBN;
+        public string Author {  get; set; } //Value - will be stored in a private variable
+        public string Title {  get; set; }
+
+        //Using access properties to validate year
+        private int year; // private variable to store the year value
+        public int Year
+        {
+            get { return year; }
+            set
+            {
+                if (value < 0 || value > DateTime.Now.Year)
+                    throw new ArgumentOutOfRangeException("Year must be between 0 and the current year.");
+                year = value;
+            }
+        }
+        public string Description {  get; set; }
+        public string Genre {  get; set; }
+        private string ISBN { get; set; }
+
+
+ 
+        public double Price { get; private set; } // properties to controll set and get the price of the book, private set means it can only be set within the class
 
         //constructor to initialize the book properties
         public Book()  //() its function, dont terminate it with a semicolon
         {
             Year = 2026;
+            Price = 200;
             ISBN = "123-4567890123";
             Console.WriteLine("Constructor function called");
         }
@@ -43,6 +60,7 @@ namespace LibraryProject
             Description = description;
             Genre = genre;
             ISBN = "123-4567890123";
+            Price = 200;
         }
 
         /*
@@ -56,6 +74,7 @@ namespace LibraryProject
             Console.WriteLine($"Description: {Description}");
             Console.WriteLine($"Genre: {Genre}");
             Console.WriteLine($"ISBN: {ISBN}");
+            Console.WriteLine($"Price: {Price}");
         }
         public void DisplayBookInfo(bool basicInfo)
         {

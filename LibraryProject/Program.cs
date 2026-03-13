@@ -49,10 +49,17 @@ book6.Genre = "Programming";
 book6.Quantity = 10;
 book6.ShelfNumber = "A1";
 book6.IsAvailable = true;
-
+//book6.Price = 300; // this a set, not allowed because the set accessor is private
+Console.WriteLine(book6.Price); // this a get
 //.DisplayBookInfo(); // Display common book information
 //book6.DisplayLibraryBookInfo(); // Display library book specific information
-
+try
+{
+    book6.Year = 2027; // This will throw an exception because the year is out of range, 
+}catch (ArgumentOutOfRangeException ex)
+{
+    Console.WriteLine($"Error setting year: {ex.Message}");
+}
 //Display books using the method in Book class
 Console.WriteLine("Displaying Book 1 Information:");
 book.DisplayBookInfo();
